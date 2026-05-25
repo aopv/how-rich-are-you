@@ -1,4 +1,6 @@
 const WORLD_POPULATION = 8_293_000_000;
+const VISITOR_COUNTER_URL = "https://api.counterapi.dev/v1/apoorvdarshan-how-rich-are-you/site-refreshes/up";
+const LOCAL_VISITOR_COUNT_KEY = "how-rich-are-you-refresh-count";
 
 const fallbackRatesPerUsd = {
   AED: 3.67,
@@ -229,6 +231,7 @@ const amountInput = document.querySelector("#incomeAmount");
 const currencyInput = document.querySelector("#currency");
 const periodInput = document.querySelector("#period");
 const percentileOutput = document.querySelector("#percentile");
+const visitorCountOutput = document.querySelector("#visitorCount");
 const rankOutput = document.querySelector("#rank");
 const peopleBelowOutput = document.querySelector("#peopleBelow");
 const cyberClassOutput = document.querySelector("#cyberClass");
@@ -247,6 +250,38 @@ function compact(value) {
     notation: "compact",
     maximumFractionDigits: 2,
   }).format(value);
+}
+
+function formatVisitorCount(value) {
+  const count = Math.max(0, Number(value) || 0);
+  return String(count).padStart(7, "0");
+}
+
+function incrementLocalVisitorCount() {
+  try {
+    const storedCount = Number(window.localStorage.getItem(LOCAL_VISITOR_COUNT_KEY)) || 0;
+    const nextCount = storedCount + 1;
+    window.localStorage.setItem(LOCAL_VISITOR_COUNT_KEY, String(nextCount));
+    return nextCount;
+  } catch {
+    return 1;
+  }
+}
+
+async function updateVisitorCount() {
+  try {
+    const response = await fetch(VISITOR_COUNTER_URL, { cache: "no-store" });
+    const data = await response.json();
+
+    if (!response.ok || typeof data.count !== "number") {
+      throw new Error("Visitor counter response was not usable");
+    }
+
+    visitorCountOutput.textContent = formatVisitorCount(data.count);
+  } catch {
+    visitorCountOutput.textContent = formatVisitorCount(incrementLocalVisitorCount());
+    visitorCountOutput.title = "local fallback";
+  }
 }
 
 function populateCurrencies() {
@@ -366,6 +401,7 @@ function updateCalculator() {
 
 populateCurrencies();
 loadExchangeRates();
+updateVisitorCount();
 
 form.addEventListener("input", updateCalculator);
 form.addEventListener("change", updateCalculator);
