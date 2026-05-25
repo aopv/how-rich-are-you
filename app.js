@@ -228,7 +228,6 @@ const form = document.querySelector("#incomeForm");
 const amountInput = document.querySelector("#incomeAmount");
 const currencyInput = document.querySelector("#currency");
 const periodInput = document.querySelector("#period");
-const rateStatus = document.querySelector("#rateStatus");
 const percentileOutput = document.querySelector("#percentile");
 const rankOutput = document.querySelector("#rank");
 const peopleBelowOutput = document.querySelector("#peopleBelow");
@@ -315,9 +314,8 @@ async function loadExchangeRates() {
     }
 
     ratesPerUsd = { ...fallbackRatesPerUsd, ...data.rates };
-    rateStatus.textContent = "currency rates: live web rates";
   } catch {
-    rateStatus.textContent = "currency rates: rough offline fallback";
+    ratesPerUsd = { ...fallbackRatesPerUsd };
   }
 
   updateCalculator();

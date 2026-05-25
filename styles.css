@@ -178,13 +178,6 @@ button:active {
   font-weight: bold;
 }
 
-.tiny-icon {
-  width: 16px;
-  height: 16px;
-  vertical-align: middle;
-  image-rendering: pixelated;
-}
-
 .percent {
   margin: 0 auto 6px;
   border: 3px inset #fff;
