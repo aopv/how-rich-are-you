@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Income Cyber-Meter</title>
+    <meta name="description" content="A tiny 90s-style income rank calculator.">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="window" aria-label="Income Cyber-Meter">
+        <header class="titlebar">
+          <span class="dot red"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+          <strong>INCOME CYBER-METER 1997</strong>
+        </header>
+
+        <div class="ticker">
+          <marquee scrollamount="5">*** TYPE MONEY *** SEE GLOBAL RANK *** TOTALLY RETRO ***</marquee>
+        </div>
+
+        <div class="content">
+          <div class="intro">
+            <span class="badge blink">NEW!</span>
+            <h1>How rich are you?</h1>
+            <p>Small fake-90s calculator for a rough global income rank.</p>
+          </div>
+
+          <form class="calculator" id="incomeForm">
+            <label>
+              <span>Income</span>
+              <input id="incomeAmount" type="number" min="0" step="100" value="50000">
+            </label>
+
+            <div class="row">
+              <label>
+                <span>Currency</span>
+                <select id="currency">
+                  <option value="USD">USD $</option>
+                  <option value="INR">INR Rs</option>
+                  <option value="EUR">EUR</option>
+                  <option value="GBP">GBP</option>
+                  <option value="JPY">JPY</option>
+                </select>
+              </label>
+
+              <label>
+                <span>Period</span>
+                <select id="period">
+                  <option value="year">Year</option>
+                  <option value="month">Month</option>
+                  <option value="week">Week</option>
+                  <option value="day">Day</option>
+                </select>
+              </label>
+            </div>
+
+            <button type="submit">CALCULATE</button>
+          </form>
+
+          <section class="result" aria-live="polite">
+            <div class="percent" id="percentile">95.9%</div>
+            <div class="label">richer than world population</div>
+            <div class="meter" aria-hidden="true">
+              <span id="meterFill"></span>
+            </div>
+            <div class="stats">
+              <p><span>Rank</span><strong id="rank">#341M / 8.29B</strong></p>
+              <p><span>Below you</span><strong id="peopleBelow">7.95B</strong></p>
+              <p><span>Class</span><strong id="cyberClass">VERY RICH</strong></p>
+            </div>
+          </section>
+        </div>
+
+        <footer>Rough estimate only. No data saved.</footer>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
