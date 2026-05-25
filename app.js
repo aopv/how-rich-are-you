@@ -93,24 +93,6 @@ const featuredCurrencies = [
 
 let ratesPerUsd = { ...fallbackRatesPerUsd };
 
-const retroGifLabels = [
-  "NEW!", "HOT!", "WOW!", "COOL", "CLICK", "HOME", "MONEY", "CASH", "RICH?", "POOR?",
-  "WWW", "NET", "EMAIL", "MODEM", "DIALUP", "Y2K", "JAVA", "HTML", "FRAMES", "TABLES",
-  "HITS", "VISIT", "LOGIN", "FREE", "BONUS", "WIN!", "TOP", "RANK", "STATS", "CHART",
-  "CYBER", "WEB", "PAGE", "LINKS", "BETA", "V1.0", "UPLOAD", "DOWNLOAD", "SEARCH", "INDEX",
-  "FAST", "SLOW", "LOAD", "GIF!", "JPEG", "PIXEL", "FONT", "BLINK", "MIDI", "CHAT",
-  "FAQ", "HELP", "NEWS", "INFO", "DATA", "GOLD", "COIN", "BANK", "VAULT", "BILLS",
-  "TAX?", "PAYDAY", "SALARY", "WAGES", "INCOME", "GLOBAL", "PLANET", "HUMANS", "QUEUE", "LEVEL",
-  "ELITE", "MID", "LOW", "HIGH", "ULTRA", "MEGA", "MINI", "RETRO", "GEOCITY", "PORTAL",
-  "START", "ENTER", "EXIT", "BACK", "NEXT", "SAVE", "PRINT", "BOOKMARK", "AWARD", "SITE",
-  "NEWEST", "TODAY", "1996", "1997", "1998", "CACHE", "SERVER", "BROWSER", "COUNTER", "GUEST",
-];
-
-const retroGifFiles = retroGifLabels.map((label, index) => ({
-  alt: label,
-  src: `assets/gifs/retro-${String(index + 1).padStart(3, "0")}.gif`,
-}));
-
 const localMemeGifLabels = [
   "broke poor", "im broke", "broke im broke", "broke money",
   "if youre broke just say so", "fake crying", "rich money", "money wow",
@@ -252,7 +234,6 @@ const rankOutput = document.querySelector("#rank");
 const peopleBelowOutput = document.querySelector("#peopleBelow");
 const cyberClassOutput = document.querySelector("#cyberClass");
 const meterFill = document.querySelector("#meterFill");
-const gifWall = document.querySelector("#gifWall");
 const reactionBox = document.querySelector("#reactionBox");
 const reactionGif = document.querySelector("#reactionGif");
 let lastMemeGifIndex = -1;
@@ -293,22 +274,6 @@ function shuffle(items) {
   }
 
   return copy;
-}
-
-function renderGifWall() {
-  const selected = shuffle(retroGifFiles).slice(0, 10);
-
-  gifWall.replaceChildren();
-
-  selected.forEach((gif) => {
-    const image = document.createElement("img");
-    image.className = "gif-img";
-    image.src = gif.src;
-    image.alt = gif.alt;
-    image.width = 88;
-    image.height = 31;
-    gifWall.append(image);
-  });
 }
 
 function refillMemeGifDeck() {
@@ -402,9 +367,7 @@ function updateCalculator() {
 }
 
 populateCurrencies();
-renderGifWall();
 loadExchangeRates();
-window.setInterval(renderGifWall, 4500);
 
 form.addEventListener("input", updateCalculator);
 form.addEventListener("change", updateCalculator);

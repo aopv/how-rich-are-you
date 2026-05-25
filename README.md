@@ -2,7 +2,6 @@
 
 A dependency-free 90s-style web calculator that turns income into a playful global rank estimate.
 
-Includes 100 generated local retro GIF badges in `assets/gifs/`, with a random selection shown on each page load.
 Includes a 100-item broke/rich meme reaction GIF pool from bundled files plus hardcoded Giphy/Tenor media URLs. One shuffled random GIF appears only after each calculation.
 Includes Vercel Web Analytics for deployed page views and a `Calculate` custom event.
 

@@ -86,25 +86,6 @@ marquee {
   background: #000;
 }
 
-.gif-row {
-  background: #000;
-}
-
-.gif-wall {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-  min-height: 31px;
-}
-
-.gif-img {
-  width: 72px;
-  height: auto;
-  border: 1px solid #ffffff;
-  image-rendering: pixelated;
-}
-
 .box {
   border: 2px inset #fff;
   background: #eeeeee;
