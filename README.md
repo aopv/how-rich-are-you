@@ -1,6 +1,6 @@
 # Income Cyber-Meter 1997
 
-A dependency-free retro web calculator that turns income into a playful global rank estimate.
+A dependency-free 90s-style web calculator that turns income into a playful global rank estimate.
 
 Run it locally:
 

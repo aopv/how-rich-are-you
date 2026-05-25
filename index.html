@@ -3,80 +3,112 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Income Cyber-Meter</title>
+    <title>Income-O-Meter 1996</title>
     <meta name="description" content="A tiny 90s-style income rank calculator.">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main class="page">
-      <section class="window" aria-label="Income Cyber-Meter">
-        <header class="titlebar">
-          <span class="dot red"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
-          <strong>INCOME CYBER-METER 1997</strong>
-        </header>
+    <center>
+      <table class="page-table" cellpadding="8" cellspacing="0" border="3">
+        <tr>
+          <td class="masthead" colspan="2">
+            <h1>Income-O-Meter</h1>
+            <p class="tagline">how rich/poor are you vs world population?</p>
+            <marquee scrollamount="4">*** enter income money below *** rough global rank *** best viewed in 800x600 ***</marquee>
+          </td>
+        </tr>
 
-        <div class="ticker">
-          <marquee scrollamount="5">*** TYPE MONEY *** SEE GLOBAL RANK *** TOTALLY RETRO ***</marquee>
-        </div>
+        <tr>
+          <td class="badges" colspan="2">
+            <span class="button88 blink">NEW!</span>
+            <span class="button88">NO COOKIES</span>
+            <span class="button88">1996 MODE</span>
+            <span class="counter">visitors: <b>00042069</b></span>
+          </td>
+        </tr>
 
-        <div class="content">
-          <div class="intro">
-            <span class="badge blink">NEW!</span>
-            <h1>How rich are you?</h1>
-            <p>Small fake-90s calculator for a rough global income rank.</p>
-          </div>
+        <tr>
+          <td class="gif-row" colspan="2">
+            <div id="gifWall" class="gif-wall" aria-label="Random retro gif badges"></div>
+          </td>
+        </tr>
 
-          <form class="calculator" id="incomeForm">
-            <label>
-              <span>Income</span>
-              <input id="incomeAmount" type="number" min="0" step="100" value="50000">
-            </label>
+        <tr>
+          <td class="box form-box" width="46%" valign="top">
+            <form id="incomeForm">
+              <table width="100%" cellpadding="4" cellspacing="0" border="0">
+                <tr>
+                  <td colspan="2"><b>Enter Income Money:</b></td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <input id="incomeAmount" type="number" min="0" step="100" value="50000">
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>Currency</b></td>
+                  <td><b>Period</b></td>
+                </tr>
+                <tr>
+                  <td>
+                    <select id="currency">
+                      <option value="USD">USD - US Dollar</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select id="period">
+                      <option value="year">Year</option>
+                      <option value="month">Month</option>
+                      <option value="week">Week</option>
+                      <option value="day">Day</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="2">
+                    <button type="submit">Calculate Now!</button>
+                  </td>
+                </tr>
+              </table>
+            </form>
+            <p class="small" id="rateStatus">currency rates: rough fallback</p>
+            <p class="small">
+              <img class="tiny-icon" alt="" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP//AAAAAP8AAP8A/wD//wAA//8A////ACH5BAEAAAcALAAAAAAQABAAAAM/eLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKRyOQAAOw==">
+              under construction
+            </p>
+          </td>
 
-            <div class="row">
-              <label>
-                <span>Currency</span>
-                <select id="currency">
-                  <option value="USD">USD $</option>
-                  <option value="INR">INR Rs</option>
-                  <option value="EUR">EUR</option>
-                  <option value="GBP">GBP</option>
-                  <option value="JPY">JPY</option>
-                </select>
-              </label>
-
-              <label>
-                <span>Period</span>
-                <select id="period">
-                  <option value="year">Year</option>
-                  <option value="month">Month</option>
-                  <option value="week">Week</option>
-                  <option value="day">Day</option>
-                </select>
-              </label>
-            </div>
-
-            <button type="submit">CALCULATE</button>
-          </form>
-
-          <section class="result" aria-live="polite">
+          <td class="box result-box" width="54%" valign="top">
+            <p class="small-title">YOUR WORLD CASH RANK:</p>
             <div class="percent" id="percentile">95.9%</div>
-            <div class="label">richer than world population</div>
-            <div class="meter" aria-hidden="true">
+            <p><b>richer than humans:</b> <span id="peopleBelow">7.95B</span></p>
+            <div class="meter" aria-label="Income percentile meter">
               <span id="meterFill"></span>
             </div>
-            <div class="stats">
-              <p><span>Rank</span><strong id="rank">#341M / 8.29B</strong></p>
-              <p><span>Below you</span><strong id="peopleBelow">7.95B</strong></p>
-              <p><span>Class</span><strong id="cyberClass">VERY RICH</strong></p>
-            </div>
-          </section>
-        </div>
+            <table class="stats" width="100%" cellpadding="4" cellspacing="0" border="1">
+              <tr>
+                <td>Rank</td>
+                <td id="rank">#340.97M / 8.29B</td>
+              </tr>
+              <tr>
+                <td>Class</td>
+                <td id="cyberClass">VERY RICH</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
 
-        <footer>Rough estimate only. No data saved.</footer>
-      </section>
-    </main>
+        <tr>
+          <td class="footer" colspan="2">
+            <a href="#">home</a> |
+            <a href="#">guestbook</a> |
+            <a href="#">web ring</a>
+            <br>
+            rough estimate only. no data saved.
+          </td>
+        </tr>
+      </table>
+    </center>
 
     <script src="app.js"></script>
   </body>
