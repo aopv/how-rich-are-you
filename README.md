@@ -2,9 +2,21 @@
 
 A dependency-free 90s-style web calculator that turns income into a playful global rank estimate.
 
-Includes a 100-item broke/rich meme reaction GIF pool from bundled files plus hardcoded Giphy/Tenor media URLs. One shuffled random GIF appears only after each calculation.
-Includes Vercel Web Analytics for deployed page views and a `Calculate` custom event.
-Includes an old-school visible visitor counter that increments once per page load.
+![How Rich Are You? Open Graph preview](assets/og-image.jpg)
+
+Live site: https://how-rich-are-you.vercel.app/
+
+## Features
+
+- 90s-style single-page income rank calculator.
+- Desktop layout shaped for a 1200x630 Open Graph-style preview.
+- Mobile responsive layout with stacked form/results.
+- Most-used currency dropdown with flags.
+- 100-item broke/rich meme GIF reaction pool from bundled files plus hardcoded Giphy/Tenor media URLs.
+- One shuffled random GIF appears only after each calculation.
+- Vercel Web Analytics for deployed page views and a `Calculate` custom event.
+- Old-school visible visitor counter that increments once per page load.
+- Open Graph and Twitter/X preview image at `assets/og-image.jpg`.
 
 Run it locally:
 
