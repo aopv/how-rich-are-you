@@ -39,11 +39,15 @@ a {
 }
 
 .page-table {
-  width: 610px;
+  width: min(1100px, calc(100vw - 32px));
   max-width: 100%;
   table-layout: fixed;
   border-color: #ffffff #333333 #333333 #ffffff;
   background: #c0c0c0;
+}
+
+.page-table > tbody > tr > td {
+  padding: 7px;
 }
 
 .masthead {
@@ -54,13 +58,13 @@ a {
 h1 {
   margin: 0;
   color: #000080;
-  font-size: 38px;
+  font-size: 36px;
   line-height: 1;
   text-decoration: underline;
 }
 
 .tagline {
-  margin: 4px 0 8px;
+  margin: 3px 0 7px;
   color: #800000;
   font-weight: bold;
 }
@@ -192,16 +196,16 @@ button:active {
 .percent {
   margin: 0 auto 6px;
   border: 3px inset #fff;
-  padding: 8px 4px;
+  padding: 7px 4px;
   color: #00ff00;
   background: #000;
   font-family: "Courier New", Courier, monospace;
-  font-size: 36px;
+  font-size: 34px;
   font-weight: bold;
 }
 
 .meter {
-  height: 18px;
+  height: 16px;
   margin: 8px 0;
   border: 2px inset #fff;
   background: #ff0000;
@@ -244,6 +248,28 @@ button:active {
   object-fit: contain;
   image-rendering: pixelated;
   background: #000;
+}
+
+@media (min-width: 641px) {
+  .reaction-box {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    align-items: center;
+    gap: 8px;
+    max-width: 510px;
+    min-height: 176px;
+  }
+
+  .reaction-box .small-title {
+    margin: 0;
+    text-align: right;
+  }
+
+  .reaction-gif {
+    width: clamp(180px, 28vw, 320px);
+    height: clamp(115px, 15vw, 170px);
+    max-height: none;
+  }
 }
 
 .footer {
