@@ -1,8 +1,10 @@
-# Income Cyber-Meter 1997
+# How Rich Are You?
 
 A dependency-free 90s-style web calculator that turns income into a playful global rank estimate.
 
 Includes 100 generated local retro GIF badges in `assets/gifs/`, with a random selection shown on each page load.
+Includes a 100-item broke/rich meme reaction GIF pool from bundled files plus hardcoded Giphy/Tenor media URLs. One shuffled random GIF appears only after each calculation.
+Includes Vercel Web Analytics for deployed page views and a `Calculate` custom event.
 
 Run it locally:
 
@@ -20,3 +22,7 @@ References used for context:
 
 - UN World Population Prospects 2024: https://www.un.org/development/desa/pd/world-population-prospects-2024
 - World Inequality Report 2022 / WID.world: https://wir2022.wid.world/executive-summary/
+
+## License
+
+MIT

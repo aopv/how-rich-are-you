@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Income-O-Meter 1996</title>
+    <title>How Rich Are You?</title>
     <meta name="description" content="A tiny 90s-style income rank calculator.">
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -12,7 +12,7 @@
       <table class="page-table" cellpadding="8" cellspacing="0" border="3">
         <tr>
           <td class="masthead" colspan="2">
-            <h1>Income-O-Meter</h1>
+            <h1>How Rich Are You?</h1>
             <p class="tagline">how rich/poor are you vs world population?</p>
             <marquee scrollamount="4">*** enter income money below *** rough global rank *** best viewed in 800x600 ***</marquee>
           </td>
@@ -76,6 +76,10 @@
               <img class="tiny-icon" alt="" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP//AAAAAP8AAP8A/wD//wAA//8A////ACH5BAEAAAcALAAAAAAQABAAAAM/eLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKRyOQAAOw==">
               under construction
             </p>
+            <div class="reaction-box" id="reactionBox" hidden>
+              <p class="small-title">RANDOM CALCULATE GIF:</p>
+              <img id="reactionGif" class="reaction-gif" alt="Random money reaction gif" width="220" height="140">
+            </div>
           </td>
 
           <td class="box result-box" width="54%" valign="top">
@@ -104,12 +108,20 @@
             <a href="#">guestbook</a> |
             <a href="#">web ring</a>
             <br>
+            <a href="https://github.com/apoorvdarshan/how-rich-are-you">github</a> |
+            <a href="https://www.linkedin.com/in/apoorvdarshan">linkedin</a> |
+            <a href="https://x.com/apoorvdarshan">x @apoorvdarshan</a>
+            <br>
             rough estimate only. no data saved.
           </td>
         </tr>
       </table>
     </center>
 
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

@@ -3,6 +3,10 @@ body {
   min-height: 100%;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   padding: 18px 8px;
@@ -25,7 +29,7 @@ a {
 }
 
 .page-table {
-  width: 650px;
+  width: 610px;
   max-width: 100%;
   border-color: #ffffff #333333 #333333 #ffffff;
   background: #c0c0c0;
@@ -39,7 +43,7 @@ a {
 h1 {
   margin: 0;
   color: #000080;
-  font-size: 44px;
+  font-size: 38px;
   line-height: 1;
   text-decoration: underline;
 }
@@ -95,8 +99,8 @@ marquee {
 }
 
 .gif-img {
-  width: 88px;
-  height: 31px;
+  width: 72px;
+  height: auto;
   border: 1px solid #ffffff;
   image-rendering: pixelated;
 }
@@ -207,7 +211,7 @@ button:active {
   color: #00ff00;
   background: #000;
   font-family: "Courier New", Courier, monospace;
-  font-size: 42px;
+  font-size: 36px;
   font-weight: bold;
 }
 
@@ -235,6 +239,26 @@ button:active {
 .stats td:last-child {
   text-align: right;
   font-weight: bold;
+}
+
+.reaction-box {
+  margin: 8px auto 0;
+  border: 2px inset #fff;
+  padding: 5px;
+  background: #c0c0c0;
+  text-align: center;
+}
+
+.reaction-gif {
+  display: block;
+  width: 170px;
+  max-width: 100%;
+  max-height: 115px;
+  margin: 0 auto;
+  border: 3px inset #fff;
+  object-fit: contain;
+  image-rendering: pixelated;
+  background: #000;
 }
 
 .footer {
