@@ -90,58 +90,15 @@ marquee {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 4px;
-  min-height: 26px;
+  gap: 5px;
+  min-height: 31px;
 }
 
-.gif-tile {
-  display: inline-grid;
-  place-items: center;
-  width: 72px;
-  height: 22px;
-  border: 2px outset #fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  font-weight: bold;
-  line-height: 1;
-  text-align: center;
-  text-shadow: 1px 1px #000;
-  text-transform: uppercase;
-  overflow: hidden;
-}
-
-.gif-hot {
-  color: #ffffff;
-  background: #ff0000;
-  animation: flash 0.75s steps(2) infinite;
-}
-
-.gif-cool {
-  color: #ffffff;
-  background: #0000cc;
-}
-
-.gif-money {
-  color: #00ff00;
-  background: #000000;
-  animation: pulse 0.9s steps(2) infinite;
-}
-
-.gif-warn {
-  color: #000000;
-  background: #ffff00;
-  text-shadow: none;
-}
-
-.gif-web {
-  color: #ff00ff;
-  background: #00ffff;
-}
-
-.gif-dark {
-  color: #ffffff;
-  background: #800080;
-  animation: wiggle 0.45s steps(2) infinite;
+.gif-img {
+  width: 88px;
+  height: 31px;
+  border: 1px solid #ffffff;
+  image-rendering: pixelated;
 }
 
 .box {
@@ -292,24 +249,6 @@ button:active {
 @keyframes blink {
   50% {
     visibility: hidden;
-  }
-}
-
-@keyframes flash {
-  50% {
-    background: #ff6600;
-  }
-}
-
-@keyframes pulse {
-  50% {
-    transform: scale(0.94);
-  }
-}
-
-@keyframes wiggle {
-  50% {
-    transform: translateX(2px);
   }
 }
 

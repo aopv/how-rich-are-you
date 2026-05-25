@@ -2,6 +2,8 @@
 
 A dependency-free 90s-style web calculator that turns income into a playful global rank estimate.
 
+Includes 100 generated local retro GIF badges in `assets/gifs/`, with a random selection shown on each page load.
+
 Run it locally:
 
 ```sh

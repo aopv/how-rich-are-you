@@ -106,6 +106,11 @@ const retroGifLabels = [
   "NEWEST", "TODAY", "1996", "1997", "1998", "CACHE", "SERVER", "BROWSER", "COUNTER", "GUEST",
 ];
 
+const retroGifFiles = retroGifLabels.map((label, index) => ({
+  alt: label,
+  src: `assets/gifs/retro-${String(index + 1).padStart(3, "0")}.gif`,
+}));
+
 const periodMultipliers = {
   year: 1,
   month: 12,
@@ -177,16 +182,18 @@ function shuffle(items) {
 }
 
 function renderGifWall() {
-  const styles = ["gif-hot", "gif-cool", "gif-money", "gif-warn", "gif-web", "gif-dark"];
-  const selected = shuffle(retroGifLabels).slice(0, 8);
+  const selected = shuffle(retroGifFiles).slice(0, 10);
 
   gifWall.replaceChildren();
 
-  selected.forEach((label, index) => {
-    const tile = document.createElement("span");
-    tile.className = `gif-tile ${styles[index % styles.length]}`;
-    tile.textContent = label;
-    gifWall.append(tile);
+  selected.forEach((gif) => {
+    const image = document.createElement("img");
+    image.className = "gif-img";
+    image.src = gif.src;
+    image.alt = gif.alt;
+    image.width = 88;
+    image.height = 31;
+    gifWall.append(image);
   });
 }
 
