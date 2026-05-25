@@ -10,6 +10,10 @@
   <body>
     <center>
       <table class="page-table" cellpadding="8" cellspacing="0" border="3">
+        <colgroup>
+          <col class="form-col">
+          <col class="result-col">
+        </colgroup>
         <tr>
           <td class="masthead" colspan="2">
             <h1>How Rich Are You?</h1>
@@ -28,7 +32,7 @@
         </tr>
 
         <tr>
-          <td class="box form-box" width="46%" valign="top">
+          <td class="box form-box" width="34%" valign="top">
             <form id="incomeForm">
               <table width="100%" cellpadding="4" cellspacing="0" border="0">
                 <tr>
@@ -65,29 +69,33 @@
                 </tr>
               </table>
             </form>
-            <div class="reaction-box" id="reactionBox" hidden>
-              <p class="small-title">RANDOM CALCULATE GIF:</p>
-              <img id="reactionGif" class="reaction-gif" alt="Random money reaction gif" width="220" height="140">
-            </div>
           </td>
 
-          <td class="box result-box" width="54%" valign="top">
-            <p class="small-title">YOUR WORLD CASH RANK:</p>
-            <div class="percent" id="percentile">95.9%</div>
-            <p><b>richer than humans:</b> <span id="peopleBelow">7.95B</span></p>
-            <div class="meter" aria-label="Income percentile meter">
-              <span id="meterFill"></span>
+          <td class="box result-box" width="66%" valign="top">
+            <div class="result-grid">
+              <div class="numbers-box">
+                <p class="small-title">YOUR WORLD CASH RANK:</p>
+                <div class="percent" id="percentile">95.9%</div>
+                <p><b>richer than humans:</b> <span id="peopleBelow">7.95B</span></p>
+                <div class="meter" aria-label="Income percentile meter">
+                  <span id="meterFill"></span>
+                </div>
+                <table class="stats" width="100%" cellpadding="4" cellspacing="0" border="1">
+                  <tr>
+                    <td>Rank</td>
+                    <td id="rank">#340.97M / 8.29B</td>
+                  </tr>
+                  <tr>
+                    <td>Class</td>
+                    <td id="cyberClass">VERY RICH</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="reaction-box" id="reactionBox" hidden>
+                <p class="small-title">RANDOM CALCULATE GIF:</p>
+                <img id="reactionGif" class="reaction-gif" alt="Random money reaction gif" width="360" height="210">
+              </div>
             </div>
-            <table class="stats" width="100%" cellpadding="4" cellspacing="0" border="1">
-              <tr>
-                <td>Rank</td>
-                <td id="rank">#340.97M / 8.29B</td>
-              </tr>
-              <tr>
-                <td>Class</td>
-                <td id="cyberClass">VERY RICH</td>
-              </tr>
-            </table>
           </td>
         </tr>
 

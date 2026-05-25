@@ -39,7 +39,7 @@ a {
 }
 
 .page-table {
-  width: min(1100px, calc(100vw - 32px));
+  width: min(1060px, calc(100vw - 32px));
   max-width: 100%;
   table-layout: fixed;
   border-color: #ffffff #333333 #333333 #ffffff;
@@ -48,6 +48,14 @@ a {
 
 .page-table > tbody > tr > td {
   padding: 7px;
+}
+
+.form-col {
+  width: 34%;
+}
+
+.result-col {
+  width: 66%;
 }
 
 .masthead {
@@ -117,6 +125,10 @@ marquee {
 .result-box {
   text-align: center;
   background: #ffffff;
+}
+
+.result-grid {
+  display: block;
 }
 
 input,
@@ -250,24 +262,27 @@ button:active {
   background: #000;
 }
 
-@media (min-width: 641px) {
-  .reaction-box {
+@media (min-width: 900px) {
+  .result-grid {
     display: grid;
-    grid-template-columns: 90px minmax(0, 1fr);
-    align-items: center;
+    grid-template-columns: minmax(245px, 0.72fr) minmax(420px, 1.28fr);
+    align-items: start;
     gap: 8px;
-    max-width: 510px;
-    min-height: 176px;
+  }
+
+  .reaction-box {
+    margin: 0;
+    min-height: 338px;
   }
 
   .reaction-box .small-title {
-    margin: 0;
-    text-align: right;
+    margin: 0 0 6px;
+    text-align: center;
   }
 
   .reaction-gif {
-    width: clamp(180px, 28vw, 320px);
-    height: clamp(115px, 15vw, 170px);
+    width: 100%;
+    height: clamp(240px, 24vw, 300px);
     max-height: none;
   }
 }
@@ -297,6 +312,17 @@ button:active {
     width: calc(100vw - 12px);
     max-width: 430px;
     border-width: 2px;
+  }
+
+  .page-table > colgroup,
+  .page-table > colgroup > col {
+    display: none;
+  }
+
+  .page-table > tbody,
+  .page-table > tbody > tr {
+    display: block;
+    width: 100%;
   }
 
   .page-table > tbody > tr > td {
