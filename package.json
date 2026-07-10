@@ -1,0 +1,9 @@
+{
+  "devDependencies": {
+    "wrangler": "^4.110.0"
+  },
+  "scripts": {
+    "deploy": "npm run build && npx wrangler deploy",
+    "build": "node static-build.mjs"
+  }
+}
