@@ -10,7 +10,7 @@
   },
   "routes": [
     {
-      "pattern": "how-rich-are-you.aopv.dev",
+      "pattern": "how-rich-are-you.apoorvdarshan.com",
       "custom_domain": true
     }
   ],
