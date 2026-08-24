@@ -4,7 +4,7 @@ A dependency-free 90s-style web calculator that turns income into a playful glob
 
 ![How Rich Are You? Open Graph preview](assets/og-image.jpg)
 
-Live site: https://how-rich-are-you.apoorvdarshan.com/
+Live site: https://how-rich-are-you.aopv.dev/
 
 ## Features
 
